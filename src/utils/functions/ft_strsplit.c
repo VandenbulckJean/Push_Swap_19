@@ -6,11 +6,11 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:01:01 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/09 15:01:46 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/10 10:52:48 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../../../includes/push_swap.h"
 
 static int	nb_word(char const *s, char c)
 {

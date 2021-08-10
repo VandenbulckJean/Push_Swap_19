@@ -6,11 +6,11 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:15:55 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/09 14:17:59 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/10 09:43:49 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../../../includes/push_swap.h"
 
 int	count_element_char_array(char **array)
 {

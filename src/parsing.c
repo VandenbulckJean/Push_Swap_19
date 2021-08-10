@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:27:27 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/09 17:16:44 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/10 18:29:28 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	clean_argv(int *argc, char ***argv, t_data *data)
 	int	i;
 
 	i = 0;
-	if (argc == 2)
+	if (*argc == 2)
 	{
 		*argv = ft_strsplit((*argv)[1], ' ');
 		if (!(*argv))
@@ -88,7 +88,7 @@ static int	is_integer(char *string)
 	else if (len < 10)
 		return (1);
 	else
-		return (check_limit(string, sign));
+		return (check_limits(string, sign));
 }
 
 int	check_argv(int argc, char **argv)
