@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 12:02:26 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/11 10:16:22 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 14:14:13 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 	t_data	data;
 
 	data.is_argv_malloc = 0;
-	if (argc == 0)
+	if (argc == 1)
 		return (EXIT_SUCCESS);
 	if (!(clean_argv(&argc, &argv, &data)))
 		free_n_exit(&data, 0);

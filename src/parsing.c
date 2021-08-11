@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:27:27 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 18:29:28 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 14:14:55 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ static int	is_number_char(char *string)
 
 static int	check_limits(char *string, char sign)
 {
-	if (sign == '+' && ft_strcmp(string, "2147483647") > 0)
+	if (sign == 'p' && ft_strcmp(string, "2147483647") > 0)
 		return (0);
-	else if (sign == 'p' && ft_strcmp(string + 1, "2147483647") > 0)
+	else if (sign == '+' && ft_strcmp(string + 1, "2147483647") > 0)
 		return (0);
 	else if (sign == '-' && ft_strcmp(string + 1, "2147483648") > 0)
 		return (0);
