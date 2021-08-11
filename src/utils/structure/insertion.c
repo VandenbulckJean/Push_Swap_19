@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 14:24:05 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 17:23:34 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 10:46:20 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ t_list *list_buffer)
 		answer_buffer++;
 		list_buffer = list_buffer->next;
 	}
+	return (answer);
 }
 
 static int	amount_rotation_receiver(t_list *stack_element,
@@ -57,7 +58,7 @@ t_stack *receiving_stack)
 	int		answer;
 
 	answer = 0;
-	if (receiving_stack->count < 2)
+	if (receiving_stack->count < 1)
 		return (0);
 	list_buffer = receiving_stack->first;
 	if (stack_element->nbr < receiving_stack->min)
@@ -73,7 +74,7 @@ t_stack *receiving_stack)
 	return (answer);
 }
 
-static int	amount_operation(t_insertion *insertion)
+static void	amount_operation(t_insertion *insertion)
 {
 	int		rarrb;
 	int		rr;
@@ -96,6 +97,7 @@ static int	amount_operation(t_insertion *insertion)
 void	insertion_fill(t_insertion *to_fill, t_list *stack_element,
 t_stack *stack_a, t_stack *stack_b)
 {
+	to_fill->nbr = stack_element->nbr;
 	to_fill->ra = amount_rotation_giver(stack_element, stack_a);
 	to_fill->rra = (stack_a->count - to_fill->ra) % stack_a->count;
 	to_fill->rb = amount_rotation_receiver(stack_element, stack_b);

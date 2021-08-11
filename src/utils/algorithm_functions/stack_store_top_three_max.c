@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 12:56:06 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 17:54:40 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 09:49:37 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	stack_store_top_three_max(t_stack *stack)
 	{
 		if (buffer->nbr > stack->max_2 && buffer->nbr != stack->max)
 			stack->max_2 = buffer->nbr;
+		buffer = buffer->next;
 	}
 	buffer = stack->first;
 	while (buffer)
@@ -30,5 +31,6 @@ void	stack_store_top_three_max(t_stack *stack)
 		if (buffer->nbr > stack->max_3 && buffer->nbr
 			!= stack->max && buffer->nbr != stack->max_2)
 			stack->max_3 = buffer->nbr;
+		buffer = buffer->next;
 	}
 }

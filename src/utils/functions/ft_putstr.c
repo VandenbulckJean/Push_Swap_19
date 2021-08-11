@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 11:44:58 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/11 09:12:54 by jvanden-         ###   ########.fr       */
+/*   Created: 2021/08/11 09:13:34 by jvanden-          #+#    #+#             */
+/*   Updated: 2021/08/11 09:13:57 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
-void	ft_putnbr(int n)
+void	ft_putstr(char const *str)
 {
-	if (n == -2147483648)
+	if (str)
 	{
-		ft_putstr("-2147483648");
-		return ;
+		while (*str)
+		{
+			ft_putchar(*str);
+			++str;
+		}
 	}
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + '0');
 }

@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 12:53:03 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 18:09:43 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 11:42:49 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	insertion_sorting_algorithm(t_stack *stack_a, t_stack *stack_b)
 	while (stack_a->count > 3)
 	{
 		insertion = find_best_insertion(stack_a, stack_b);
-		//do_op(insertion, stack_a, stack_b);
+		do_insertion_operation(insertion, stack_a, stack_b);
 		if (!push(stack_b, stack_a))
 			return ;
 		write(1, "pb\n", 3);
@@ -65,7 +65,6 @@ void	insertion_sorting_algorithm(t_stack *stack_a, t_stack *stack_b)
 	else
 		while (stack_b->first->nbr != stack_b->max)
 			do_n_print_reverse_rotation(stack_b, 'b');
-
 	stack_sort_three(stack_a, 'a');
 	while (stack_b->first)
 	{

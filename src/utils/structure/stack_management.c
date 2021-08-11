@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 09:50:29 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 13:17:50 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 09:38:49 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ t_stack	*stack_init_n_fill_from_char_array(int count, char **array)
 	return (stack);
 }
 
-t_stack	*stack_print(t_stack *stack)
+void	stack_print(t_stack *stack)
 {
 	t_list	*buffer;
 
@@ -86,8 +86,8 @@ t_stack	*stack_print(t_stack *stack)
 	while (buffer)
 	{
 		ft_putnbr(buffer->nbr);
-		ft_putchar('/n');
+		ft_putchar('\n');
 		buffer = buffer->next;
 	}
-	ft_putchar('/n');
+	ft_putchar('\n');
 }

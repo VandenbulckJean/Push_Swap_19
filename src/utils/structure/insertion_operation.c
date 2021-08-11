@@ -6,7 +6,7 @@
 /*   By: jvanden- <jvanden-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 18:10:26 by jvanden-          #+#    #+#             */
-/*   Updated: 2021/08/10 18:16:38 by jvanden-         ###   ########.fr       */
+/*   Updated: 2021/08/11 10:30:29 by jvanden-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_stack *stack_a, t_stack *stack_b)
 			do_n_print_rotation(stack_b, 'b');
 	else
 		while (++i < insertion.rrb)
-			do_n_print_reverse_rotation(stack_b, 'a');
+			do_n_print_reverse_rotation(stack_b, 'b');
 }
 
 static void	insertion_rr(t_insertion insertion,
@@ -48,10 +48,10 @@ t_stack *stack_a, t_stack *stack_b)
 	}
 	if (insertion.ra > insertion.rb)
 		while (i++ < insertion.ra)
-			do_print_ra(stack_a);
+			do_n_print_rotation(stack_a, 'a');
 	else
 		while (i++ < insertion.rb)
-			do_print_rb(stack_b);
+			do_n_print_rotation(stack_b, 'b');
 }
 
 static void	insertion_rrr(t_insertion *insertion,
@@ -69,11 +69,11 @@ t_stack *stack_a, t_stack *stack_b)
 	}
 	if (insertion->rra > insertion->rrb)
 		while (i++ < insertion->rra)
-			do_print_rra(stack_a);
+			do_n_print_reverse_rotation(stack_a, 'a');
 	else
 	{
 		while (i++ < insertion->rrb)
-			do_print_rrb(stack_b);
+			do_n_print_reverse_rotation(stack_b, 'b');
 	}
 }
 
